@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+  <Page.actionBar>
+    <ActionBar title="filepicker" icon="" class="action-bar"></ActionBar>
+  </Page.actionBar>
+  <StackLayout class="p-20">
+    <ScrollView class="h-full">
+      <StackLayout>
+        <Button text="Request Permissions" tap="{{ requestPermissions }}" class="btn btn-primary"/>
+        <Button text="Pick Image" tap="{{ pickImage }}" class="btn btn-primary"/>
+        <Button text="Pick PDF" tap="{{ pickPdf }}" class="btn btn-primary"/>
+
+        <Label text="List Files"></Label>
+        <Button text="Internal Files" tap="{{ listFiles }}" dir="internal_files" class="btn btn-secondary"/>
+        <Button text="Internal Cache" tap="{{ listFiles }}" dir="internal_cache" class="btn btn-secondary"/>
+        <Button text="External Files" tap="{{ listFiles }}" dir="external_files" class="btn btn-secondary"/>
+        <Button text="External Cache" tap="{{ listFiles }}" dir="external_cache" class="btn btn-secondary"/>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</Page>

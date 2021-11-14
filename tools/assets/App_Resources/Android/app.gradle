@@ -1,0 +1,34 @@
+// Add your native dependencies here:
+
+// Uncomment to add recyclerview-v7 dependency
+//dependencies {
+//	compile 'com.android.support:recyclerview-v7:+'
+//}
+
+android {  
+  signingConfigs {
+    debug {
+      storeFile file('..\\..\\..\\..\\..\\debug.keystore')
+      storePassword 'keystore'
+      keyAlias 'debug'
+      keyPassword 'keystore'
+    }
+  }
+  compileSdkVersion 29
+  defaultConfig {  
+    minSdkVersion 21
+    targetSdkVersion 29
+    generatedDensities = []
+  }  
+  aaptOptions {  
+    additionalParameters "--no-version-vectors"  
+  }
+  buildTypes {
+    debug {
+      signingConfig signingConfigs.debug
+    }
+    release {
+
+    }
+  }
+} 

@@ -1,0 +1,12 @@
+{
+  "main": "./src/main.ts",
+  "dependencies": {
+    "@nativescript/core": "file:../../node_modules/@nativescript/core",
+    "@martinbuezas/nativescript-filepicker": "file:../../dist/packages/nativescript-filepicker",
+    "@martinbuezas/nativescript-social-login": "file:../../dist/packages/nativescript-social-login"
+  },
+  "devDependencies": {
+    "@nativescript/android": "8.0.0",
+    "@nativescript/ios": "8.0.0"
+  }
+}
