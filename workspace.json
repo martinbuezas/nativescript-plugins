@@ -74,8 +74,8 @@
       }
     },
     "all": {
-      "root": "packages/",
-      "projectType": "library",
+      "root": "",
+      "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/workspace:run-commands",
@@ -103,7 +103,8 @@
           },
           "executor": "@nrwl/workspace:run-commands"
         }
-      }
+      },
+      "sourceRoot": ""
     },
     "nativescript-filepicker": {
       "root": "packages/nativescript-filepicker",
