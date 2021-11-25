@@ -3,7 +3,8 @@
   "dependencies": {
     "@nativescript/core": "file:../../node_modules/@nativescript/core",
     "@martinbuezas/nativescript-filepicker": "file:../../dist/packages/nativescript-filepicker",
-    "@martinbuezas/nativescript-social-login": "file:../../dist/packages/nativescript-social-login"
+    "@martinbuezas/nativescript-social-login": "file:../../dist/packages/nativescript-social-login",
+    "@martinbuezas/nativescript-share-file": "file:../../dist/packages/nativescript-share-file"
   },
   "devDependencies": {
     "@nativescript/android": "8.0.0",

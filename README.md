@@ -6,6 +6,7 @@ npm start
 ```
 
 - @martinbuezas/nativescript-filepicker
+- @martinbuezas/nativescript-share-file
 - @martinbuezas/nativescript-social-login
 
 # How to use?

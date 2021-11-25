@@ -85,7 +85,8 @@
           "options": {
             "commands": [
               "nx run nativescript-filepicker:build.all",
-              "nx run nativescript-social-login:build.all"
+              "nx run nativescript-social-login:build.all",
+              "nx run nativescript-share-file:build.all"
             ],
             "parallel": false
           }
@@ -188,6 +189,51 @@
           "options": {
             "commands": [
               "nx g @nativescript/plugin-tools:focus-packages nativescript-social-login"
+            ],
+            "parallel": false
+          }
+        }
+      }
+    },
+    "nativescript-share-file": {
+      "root": "packages/nativescript-share-file",
+      "projectType": "library",
+      "sourceRoot": "packages/nativescript-share-file",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/packages/nativescript-share-file",
+            "tsConfig": "packages/nativescript-share-file/tsconfig.json",
+            "packageJson": "packages/nativescript-share-file/package.json",
+            "main": "packages/nativescript-share-file/index.d.ts",
+            "assets": [
+              "packages/nativescript-share-file/*.md",
+              "packages/nativescript-share-file/index.d.ts",
+              "LICENSE",
+              {
+                "glob": "**/*",
+                "input": "packages/nativescript-share-file/platforms/",
+                "output": "./platforms/"
+              }
+            ]
+          }
+        },
+        "build.all": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx run nativescript-share-file:build",
+              "node tools/scripts/build-finish.ts nativescript-share-file"
+            ],
+            "parallel": false
+          }
+        },
+        "focus": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              "nx g @nativescript/plugin-tools:focus-packages nativescript-share-file"
             ],
             "parallel": false
           }

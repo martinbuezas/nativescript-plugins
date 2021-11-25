@@ -28,6 +28,9 @@
     },
     "nativescript-social-login": {
       "tags": []
+    },
+    "nativescript-share-file": {
+      "tags": []
     }
   },
   "workspaceLayout": {

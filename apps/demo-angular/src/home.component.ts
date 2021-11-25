@@ -6,11 +6,14 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 	demos = [
-		{
-			name: 'nativescript-filepicker'
-		},
-		{
-			name: 'nativescript-social-login'
-		}
-	];
+	{
+		name: 'nativescript-filepicker'
+	},
+	{
+		name: 'nativescript-share-file'
+	},
+	{
+		name: 'nativescript-social-login'
+	}
+];
 }

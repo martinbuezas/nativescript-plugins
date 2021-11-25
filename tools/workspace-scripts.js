@@ -77,6 +77,13 @@ module.exports = {
 					description: '@martinbuezas/nativescript-social-login: Build',
 				},
 			},
+			// @martinbuezas/nativescript-share-file
+			'nativescript-share-file': {
+				build: {
+					script: 'nx run nativescript-share-file:build.all',
+					description: '@martinbuezas/nativescript-share-file: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -94,6 +101,10 @@ module.exports = {
 			'nativescript-social-login': {
 				script: 'nx run nativescript-social-login:focus',
 				description: 'Focus on @martinbuezas/nativescript-social-login',
+			},
+			'nativescript-share-file': {
+				script: 'nx run nativescript-share-file:focus',
+				description: 'Focus on @martinbuezas/nativescript-share-file',
 			},
 			reset: {
 				script: 'nx run all:focus',
