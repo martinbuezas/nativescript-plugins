@@ -1,6 +1,6 @@
 {
 	"name": "@martinbuezas/nativescript-social-login",
-	"version": "3.0.3",
+	"version": "3.0.4",
 	"description": "Google and Facebook Login plugin for NativeScript",
 	"main": "index",
 	"typings": "index.d.ts",
