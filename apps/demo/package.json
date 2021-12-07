@@ -1,16 +1,16 @@
 {
-  "main": "./src/app.ts",
-  "description": "NativeScript Application",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "repository": "<fill-your-repository-here>",
-  "dependencies": {
-    "@nativescript/core": "file:../../node_modules/@nativescript/core",
-    "@martinbuezas/nativescript-filepicker": "file:../../packages/nativescript-filepicker",
-    "@martinbuezas/nativescript-social-login": "file:../../packages/nativescript-social-login",
-    "@martinbuezas/nativescript-share-file": "file:../../packages/nativescript-share-file"
-  },
-  "devDependencies": {
-    "@nativescript/android": "~8.1.1",
-    "@nativescript/ios": "~8.1.0"
-  }
+	"main": "./src/app.ts",
+	"description": "NativeScript Application",
+	"license": "SEE LICENSE IN <your-license-filename>",
+	"repository": "<fill-your-repository-here>",
+	"dependencies": {
+		"@nativescript/core": "file:../../node_modules/@nativescript/core",
+		"@martinbuezas/nativescript-social-login": "file:../../packages/nativescript-social-login",
+		"@martinbuezas/nativescript-filepicker": "file:../../packages/nativescript-filepicker",
+		"@martinbuezas/nativescript-share-file": "file:../../packages/nativescript-share-file"
+	},
+	"devDependencies": {
+		"@nativescript/android": "~8.1.1",
+		"@nativescript/ios": "~8.1.0"
+	}
 }

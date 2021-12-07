@@ -6,6 +6,8 @@
     <ScrollView class="h-full">
       <StackLayout>
         <Button text="nativescript-filepicker" tap="{{ viewDemo }}" class="btn btn-primary view-demo"/>
+        <Button text="nativescript-share-file" tap="{{ viewDemo }}" class="btn btn-primary view-demo"/>
+        <Button text="nativescript-social-login" tap="{{ viewDemo }}" class="btn btn-primary view-demo"/>
       </StackLayout>
     </ScrollView>
   </StackLayout>

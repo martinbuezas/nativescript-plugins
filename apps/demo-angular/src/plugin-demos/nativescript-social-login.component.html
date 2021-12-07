@@ -1,9 +1,27 @@
 <ActionBar title="nativescript-social-login" class="action-bar"> </ActionBar>
 <StackLayout class="p-20">
 	<ScrollView class="h-full">
-		<StackLayout>
+		<StackLayout *ngIf="!demoShared.user">
 			<Button text="Login with Google" (tap)="demoShared.loginWithGoogle()" class="btn btn-primary"></Button>
 			<Button text="Login with Facebook" (tap)="demoShared.loginWithFacebook()" class="btn btn-primary"></Button>
+		</StackLayout>
+
+		<StackLayout *ngIf="demoShared.user" horizontalAlignment="left">
+			<Label text="{{ demoShared.user.id }}" textWrap="true"></Label>
+			<StackLayout class="hr-light m-y-5"></StackLayout>
+			<Label text="{{ demoShared.user.email }}" textWrap="true"></Label>
+			<StackLayout class="hr-light m-y-5"></StackLayout>
+			<Label text="{{ demoShared.user.firstName }}" textWrap="true"></Label>
+			<StackLayout class="hr-light m-y-5"></StackLayout>
+			<Label text="{{ demoShared.user.lastName }}" textWrap="true"></Label>
+			<StackLayout class="hr-light m-y-5"></StackLayout>
+			<Label text="{{ demoShared.user.displayName }}" textWrap="true"></Label>
+			<StackLayout class="hr-light m-y-5"></StackLayout>
+			<Label text="{{ demoShared.user.authToken }}" textWrap="false"></Label>
+			<StackLayout class="hr-light m-y-5"></StackLayout>
+			<Label text="{{ demoShared.user.authCode }}" textWrap="false"></Label>
+			<StackLayout class="hr-light m-y-5"></StackLayout>
+			<Button text="Logout" (tap)="demoShared.logout()" class="btn btn-primary"></Button>
 		</StackLayout>
 	</ScrollView>
 </StackLayout>
