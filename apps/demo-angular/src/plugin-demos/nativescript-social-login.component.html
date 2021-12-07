@@ -4,6 +4,7 @@
 		<StackLayout *ngIf="!demoShared.user">
 			<Button text="Login with Google" (tap)="demoShared.loginWithGoogle()" class="btn btn-primary"></Button>
 			<Button text="Login with Facebook" (tap)="demoShared.loginWithFacebook()" class="btn btn-primary"></Button>
+			<Button text="Logout" (tap)="demoShared.logout()" class="btn btn-primary"></Button>
 		</StackLayout>
 
 		<StackLayout *ngIf="demoShared.user" horizontalAlignment="left">

@@ -138,8 +138,6 @@ export class SocialLogin extends SocialLoginCommon {
 							return;
 						}
 
-						console.log(googleSignInResult.getStatus());
-
 						if (googleSignInResult.isSuccess()) {
 							const account = googleSignInResult.getSignInAccount();
 							const userId = account.getId();
@@ -188,16 +186,10 @@ export class SocialLogin extends SocialLoginCommon {
 	logout(): Promise<void> {
 		return new Promise((resolve, reject) => {
 			try {
-				// FACEBOOK LOGOUT
 				if (this.fbLoginManager) {
 					this.fbLoginManager.logOut();
 					return resolve();
-				}
-
-				// GOOGLE LOGOUT
-				if (this.googleClient) {
-					console.log('Logging out on Google Client...');
-
+				} else if (this.googleClient) {
 					if (!this.googleClient.isConnected()) {
 						return reject('Google logout error: client is not connected');
 					}
@@ -216,6 +208,10 @@ export class SocialLogin extends SocialLoginCommon {
 							},
 						})
 					);
+				} else {
+					// @todo: logout will only work if we still have clients in memory.
+					// needs fixing
+					reject('Logout error: no clients found');
 				}
 			} catch (error) {
 				reject(error);
