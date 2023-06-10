@@ -23,12 +23,12 @@ dependencies {
   // implementation "groupName:pluginName:ver" 
   // EXAMPLE: implementation "com.facebook.fresco:fresco:0.9.0+"
 
-  def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '10.2.6'
-  compile "com.google.android.gms:play-services-auth:$googlePlayServicesVersion"
+  def googlePlayServicesVersion = project.hasProperty('googlePlayServicesVersion') ? project.googlePlayServicesVersion : '+'
+  implementation "com.google.android.gms:play-services-auth:$googlePlayServicesVersion"
 
   def facebookSDKVersion = project.hasProperty('facebookSDKVersion') ? project.facebookSDKVersion : '[8, 9)'
   // https://github.com/mkloubert/nativescript-social-login/issues/32#issue-285587592
-  compile ("com.facebook.android:facebook-login:$facebookSDKVersion"){
+  implementation ("com.facebook.android:facebook-login:$facebookSDKVersion"){
     exclude group: 'com.google.zxing'
   }
 
